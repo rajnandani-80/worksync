@@ -23,7 +23,9 @@ connectToMongoDB(process.env.url)
     .catch(err => console.error("MongoDB connection error:", err));
 
 
-
+app.get("/", (req, res) => {
+    res.send("WorkSync backend is running 🚀");
+});
 
 
 app.use('/user',userRoute);
