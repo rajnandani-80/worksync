@@ -3,6 +3,7 @@ const app = express();
 const port = 3011;
 
 require('dotenv').config();
+const cors = require("cors");
 app.use(cors({ origin: "*" }));
 const cookieParser = require('cookie-parser');
 
