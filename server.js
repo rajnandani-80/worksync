@@ -7,7 +7,6 @@ app.use(cors({ origin: "*" }));
 const cookieParser = require('cookie-parser');
 
 const connectToMongoDB = require('./connect');
-const staticRouter = require('./routes/staticRoute');
 const userRoute = require('./routes/user');
 const workspaceRoute = require('./routes/workspace');
 const taskRoute = require('./routes/task');
@@ -26,7 +25,6 @@ connectToMongoDB(process.env.url)
 
 
 
-app.use('/',staticRouter);
 app.use('/user',userRoute);
 app.use('/workspace',workspaceRoute);
 app.use('/task',taskRoute);
